@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- our search option -->
+    <item
+        android:id="@+id/menuRefresh"
+        android:icon="@drawable/ic_action_refresh"
+        android:orderInCategory="100"
+        android:title="Refresh"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuCreate"
+        android:orderInCategory="100"
+        android:title="Tambah Buku" />
+    <item
+        android:id="@+id/menuFav"
+        android:orderInCategory="100"
+        android:title="Buku Favorit" />
+
+</menu>
