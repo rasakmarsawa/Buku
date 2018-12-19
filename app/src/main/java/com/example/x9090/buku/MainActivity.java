@@ -182,7 +182,8 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(MainActivity.this, "Error:Server tidak ditemukan", Toast.LENGTH_SHORT).show();
+                        display();
                     }
                 });
 

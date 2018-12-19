@@ -165,7 +165,8 @@ public class FavActivity extends AppCompatActivity implements BukuAdapter.OnBuku
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(FavActivity.this, "Error:Server tidak ditemukan", Toast.LENGTH_SHORT).show();
+                        display();
                     }
                 });
 
