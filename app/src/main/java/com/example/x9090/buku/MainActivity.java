@@ -59,6 +59,13 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        loadBuku();
+    }
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.menu, menu);
