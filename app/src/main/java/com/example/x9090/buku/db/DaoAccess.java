@@ -19,6 +19,6 @@ public interface DaoAccess {
     @Query("SELECT * FROM Buku")
     List<Buku> SelectAll();
 
-    @Query("SELECT * FROM Buku INNER JOIN favorite ON Buku.id = favorite.fav_id")
+    @Query("SELECT Buku.* FROM Buku INNER JOIN favorite ON Buku.id = favorite.fav_id")
     List<Buku> SelectFavorite();
 }

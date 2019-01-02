@@ -22,6 +22,7 @@ public class Buku  implements Parcelable {
     @Ignore
     public int fav = 0;
 
+    @Ignore
     public Buku() {
     }
 

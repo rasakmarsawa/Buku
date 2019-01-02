@@ -16,7 +16,8 @@
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        android:id="@+id/conlay">
 
         <ImageView
             android:id="@+id/image_poster"
@@ -26,8 +27,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar"
-            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintTop_toBottomOf="@id/conlay"
+            app:layout_constraintTop_toTopOf="@id/conlay"
             app:srcCompat="@drawable/book" />
 
         <TextView

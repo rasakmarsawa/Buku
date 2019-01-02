@@ -54,14 +54,11 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         bukuList = new ArrayList<>();
-
-        loadBuku();
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-
         loadBuku();
     }
 
@@ -102,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
             LoadFromServer();
         } else {
             LoadFromLocale();
+
         }
     }
 
@@ -158,11 +156,11 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
 
                                 data.setPhoto_path(Api.URL_GET_IMAGE+data.getPhoto_path());
 
-                                bukuList.add(data);
-
-                                if (checkFavorite(data.getId())){
+                                if(checkFavorite(data.getId())){
                                     data.fav = 1;
                                 }
+
+                                bukuList.add(data);
 
                                 DaoAccess daoAccess = database.getDaoAccess();
                                 Buku x = daoAccess.fetchOneBukuById(data.getId());
@@ -216,5 +214,7 @@ public class MainActivity extends AppCompatActivity implements BukuAdapter.OnBuk
         }else{
             return false;
         }
+
+
     }
 }

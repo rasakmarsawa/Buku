@@ -6,6 +6,8 @@ import android.arch.persistence.room.Query;
 
 import com.example.x9090.buku.Favorite;
 
+import java.util.List;
+
 @Dao
 public interface DaoFavorite {
     @Insert
@@ -16,4 +18,7 @@ public interface DaoFavorite {
 
     @Query("SELECT * FROM favorite WHERE fav_id = :id")
     Favorite selectOne(int id);
+
+    @Query("SELECT * FROM favorite")
+    List<Favorite> selectAll();
 }

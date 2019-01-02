@@ -2,6 +2,7 @@ package com.example.x9090.buku;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.ForeignKey;
+import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
 import static android.arch.persistence.room.ForeignKey.CASCADE;
@@ -19,6 +20,7 @@ public class Favorite {
         this.fav_id = fav_id;
     }
 
+    @Ignore
     public Favorite() {
     }
 

@@ -13,51 +13,80 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary" />
 
-    <EditText
-        android:id="@+id/editTextJudul"
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Judul" />
-    <EditText
-        android:id="@+id/editTextPenulis"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Penulis" />
-    <EditText
-        android:id="@+id/editTextPenerbit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Penerbit" />
-    <EditText
-        android:id="@+id/editTextKotaTerbit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Kota Terbit" />
-    <EditText
-        android:id="@+id/editTextJumlahHalaman"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:hint="Jumlah Halaman" />
+        android:layout_height="match_parent"
+        android:id="@+id/conlay">
 
-    <Button
-        android:id="@+id/buttonSelect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Select Image" />
+        <EditText
+            android:id="@+id/editTextJudul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Judul"
+            tools:layout_editor_absoluteY="575dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/conlay"
+            app:layout_constraintTop_toTopOf="@id/conlay"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/editTextPenulis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Penulis"
+            tools:layout_editor_absoluteY="591dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextJudul"
+            app:layout_constraintTop_toBottomOf="@+id/editTextJudul"/>
+
+        <EditText
+            android:id="@+id/editTextPenerbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Penerbit"
+            tools:layout_editor_absoluteY="607dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextPenulis"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPenulis"/>
+
+        <EditText
+            android:id="@+id/editTextKotaTerbit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kota Terbit"
+            tools:layout_editor_absoluteY="623dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextPenerbit"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPenerbit" />
+
+        <EditText
+            android:id="@+id/editTextJumlahHalaman"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jumlah Halaman"
+            tools:layout_editor_absoluteY="639dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextKotaTerbit"
+            app:layout_constraintTop_toBottomOf="@+id/editTextKotaTerbit"/>
+
+        <Button
+            android:id="@+id/buttonSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Image"
+            tools:layout_editor_absoluteY="647dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/editTextJumlahHalaman"
+            app:layout_constraintTop_toBottomOf="@+id/editTextJumlahHalaman"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="647dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/buttonSelect"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSelect"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
